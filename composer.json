@@ -1,0 +1,44 @@
+{
+    "name": "deg540/php-testing-boilerplate",
+    "description": "Php testing boilerplate",
+    "type": "project",
+    "require": {
+        "php": "^8"
+    },
+    "require-dev": {
+        "vendor/phpunit/phpunit": "^9.5",
+        "vendor/infection/infection": "^0.26.16",
+        "vendor/phpro/grumphp": "^1.15",
+        "vendor/php-parallel-lint/php-parallel-lint": "^1.3",
+        "vendor/squizlabs/php_codesniffer": "^3.7",
+        "vendor/phpmd/phpmd": "^2.13",
+        "vendor/phpstan/phpstan": "^1.10"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Deg540\\PHPTestingBoilerplate\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Deg540\\PHPTestingBoilerplate\\Test\\": "tests/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "MAJOR.MINOR.PATCH"
+        },
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "infection/extension-installer": true,
+            "phpro/grumphp": true
+        }
+    },
+    "scripts": {
+        "test": [
+            "phpunit --configuration phpunit.xml"
+        ]
+    }
+}

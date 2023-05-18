@@ -1,0 +1,16 @@
+grumphp:
+    tasks:
+        phpunit:
+        phplint: ~
+        phpcs:
+            standard: PSR12
+        phpmd:
+            report_format: text
+            ruleset: [ 'phpmd-ruleset.xml' ]
+            triggered_by: [ 'php' ]
+        phpstan:
+            triggered_by: [ 'php' ]
+            use_grumphp_paths: true
+        infection:
+            threads: 4
+            test_framework: 'phpunit'
